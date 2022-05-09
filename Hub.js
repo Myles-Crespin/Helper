@@ -17,7 +17,7 @@ function draw() {
   fill(0,255,0)
   textSize(50)
   textAlign(CENTER,CENTER)
-  text("8th Grade Helper",200,100)
+  text("8th Grade Helper",width/2,height/4)
   for(let i = 0; i< buttons.length; i++){
     buttons[i].redirect()
 }}
