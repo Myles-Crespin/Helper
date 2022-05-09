@@ -35,7 +35,7 @@ class Button{
   }display(){
     this.button = createButton('test')
     this.button.style('background-color',this.color)
-    this.button.style('font-size', 30)
+    this.button.style('font-size', 30 + 'px')
     this.button.position(this.x,this.y)
     this.button.size(this.width,this.height)
   }redirect(){
