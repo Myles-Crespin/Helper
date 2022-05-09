@@ -1,6 +1,6 @@
 let buttons;
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(window.innerWidth, window.innerHeight);
   buttons = []
   let texts = [1,2,3,4,5,6]
   let urls = [1,2,3,4,5,6]
