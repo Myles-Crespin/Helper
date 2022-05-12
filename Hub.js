@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
   fill(0, 255, 0);
   textSize(50);
   textAlign(CENTER, CENTER);
@@ -41,7 +41,7 @@ class Button {
   }
   display() {
     this.button.style("background-color", 255);
-    this.button.style("font-size", 30 + "px");
+    this.button.style("font-size", height / 25 + "px");
     this.button.position(this.x, this.y);
     this.button.size(this.width, this.height);
   }
