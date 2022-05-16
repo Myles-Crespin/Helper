@@ -2,7 +2,7 @@
 let myButton;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  myButton = new Button((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
+  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {
@@ -17,7 +17,7 @@ function draw() {
                                })
   
 }
-class Button{
+class Button1{
   constructor(x,y,w,h,t,u){
     this.x = x
     this.y = y
