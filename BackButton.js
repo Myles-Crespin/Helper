@@ -1,12 +1,10 @@
 
 let myButton;
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {
-  background(220);
   if (
       mouseX < myButton.button.x + myButton.button.width &&
       mouseX > myButton.button.x &&
