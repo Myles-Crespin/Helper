@@ -30,4 +30,28 @@ function draw() {
     }
   }
 }
-
+class Button {
+  constructor(word, url, number) {
+    this.word = word;
+    this.url = url;
+    this.width = width / 4 - width / 12;
+    this.height = height / 12;
+    this.x = width / 4 + (number % 2) * (this.width + width / 6);
+    this.y = height / 2 + int(number / 2) * (this.height + this.height / 2);
+    this.button = createButton("test");
+  }
+  display() {
+    this.button.style("background-color", 255);
+    this.button.style("font-size", height / 25 + "px");
+    this.button.position(this.x, this.y);
+    this.button.size(this.width, this.height);
+  }
+  redirect() {
+    this.button.mousePressed(function buttonpress() {
+      window.location.replace(this.url);
+    });
+  }
+  mouseIsOver() {
+    this.button.style("background-color", 200);
+  }
+}
