@@ -2,18 +2,16 @@ let buttons;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
-  let texts = [1, 2, 3, 4, 5, 6];
-  let urls = [1, 2, 3, 4, 5, 6];
+  let texts = ['1', '2', '3',' 4', '5', '6'];
+  let urls = ['1', '2', '3', '4', '5', '6'];
   for (let i = 0; i < 6; i++) {
-    buttons[i] = new Button(texts, urls, i);
+    buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
-    myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   }
 }
 
 function draw() {
   background(0);
-  myButton.doStuff()
   fill(0, 255, 0);
   textSize(50);
   textAlign(CENTER, CENTER);
@@ -30,6 +28,7 @@ function draw() {
     }
   }
 }
+
 class Button {
   constructor(word, url, number) {
     this.word = word;
@@ -38,7 +37,7 @@ class Button {
     this.height = height / 12;
     this.x = width / 4 + (number % 2) * (this.width + width / 6);
     this.y = height / 2 + int(number / 2) * (this.height + this.height / 2);
-    this.button = createButton("test");
+    this.button = createButton(this.word);
   }
   display() {
     this.button.style("background-color", 255);
