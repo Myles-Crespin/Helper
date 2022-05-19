@@ -2,8 +2,8 @@ let buttons;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
-  let texts = ['1', '2', '3',' 4', '5', '6'];
-  let urls = ['1', '2', '3', '4', '5', '6'];
+  let texts = ['1', '2', '3',' Procrastination Center', '5', '6'];
+  let urls = ['1', '2', '3', 'https://ia4252.github.io/Helper/Procrastination-Center.html', '5', '6'];
   for (let i = 0; i < 6; i++) {
     buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
