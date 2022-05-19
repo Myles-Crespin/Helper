@@ -41,13 +41,15 @@ class Button {
   }
   display() {
     this.button.style("background-color", 255);
-    this.button.style("font-size", height / 25 + "px");
+    this.button.style("font-size", height / 35 + "px");
     this.button.position(this.x, this.y);
     this.button.size(this.width, this.height);
   }
   redirect() {
+    let lru = this.url
     this.button.mousePressed(function buttonpress() {
-      window.location.replace(this.url);
+      print(lru)
+      //window.location.replace(this.url);
     });
   }
   mouseIsOver() {
