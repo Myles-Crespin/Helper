@@ -48,8 +48,7 @@ class Button {
   redirect() {
     let lru = this.url
     this.button.mousePressed(function buttonpress() {
-      print(lru)
-      //window.location.replace(this.url);
+      window.location.replace(this.url);
     });
   }
   mouseIsOver() {
