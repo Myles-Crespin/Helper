@@ -1,3 +1,4 @@
+let myButton
 
 class Button1{
   constructor(x,y,w,h,t,u){
