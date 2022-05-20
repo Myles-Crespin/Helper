@@ -31,10 +31,12 @@ function setup() {
   CircleD = 40;
   CircleXVelocity = 2;
   CircleYVelocity = 4;
+    myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {
   background(220);
+   myButton.doStuff()
   fill(300, 240, 0);
   noStroke();
   frameRate(400);
