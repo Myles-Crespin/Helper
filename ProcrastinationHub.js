@@ -49,7 +49,7 @@ class Button {
   }
   redirect() {
     this.button.mousePressed(function buttonpress() {
-      window.location.replace(this.url);
+      window.location.replace(lru);
     });
   }
   mouseIsOver() {
