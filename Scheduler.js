@@ -37,7 +37,7 @@ function setup() {
   }
 }
 
-function draw() {}
+function draw() {myButton.doStuff()}
 
 function go() {
   textSize(15);
