@@ -1,4 +1,5 @@
 let x1, y1, w1, l1, x2, y2, w2, l2, direction, directions, right1, right2, speed1, speed2, img, img2, img3, YN
+
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   
@@ -18,7 +19,6 @@ function setup() {
   img3 = loadImage('download (1).jpeg')
   directions = ['right', 'left', 'up', 'down'];
   direction = random(directions);
-  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 
 }
 
@@ -44,7 +44,7 @@ function draw() {
       y1 = y1 + speed1
     }
     direction = random(directions)
-myButton.doStuff()
+
     if (direction == 'right') {
       x2 = x2 + speed2
     } else if (direction == 'left') {
@@ -75,36 +75,39 @@ myButton.doStuff()
 }
 
 function win() {
+  textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
   image(img, 0, 0,width, height+height/10)
-  text('YOU WON!!!', width / 2 - width/3, height / 2 + height/40)
+  text('YOU WON!!!', width / 2, height / 2 + height/40)
   textSize(20)
-  text('You Collided with the enemy and they blew up!', (width -400)/ 2, height - height/4)
-  text('Press "S" to restart', width / 2 - width/7, height-height/20)
+  text('You Collided with the enemy and they blew up!', (width / 2, height - height/4))
+  text('Press "S" to restart', width / 2, height-height/20)
   YN = false
 }
 
 function lose1() {
+    textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
   image(img2, 0, 0, width, height+height/10)
-  text('YOU LOST     :(', width / 2 - width/3, height / 2 + height/40)
+  text('YOU LOST     :(', width / 2 , height / 2 + height/40)
   textSize(18)
-  text('You left the gate open and the enemy escaped!', (width -400)/ 2, height - height/4)
-  text('Press "S" to restart', width / 2 - width/7, height -height/20)
+  text('You left the gate open and the enemy escaped!', width/ 2, height - height/4)
+  text('Press "S" to restart', width / 2, height -height/20)
   YN = false
 
 }
 
 function lose2() {
+    textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
   image(img3, 0, 0, width, height+height/8)
-  text('YOU LOST     :(', width / 2 - width/3, height / 2 + height/40)
+  text('YOU LOST     :(', width/2, height / 2 + height/40)
   textSize(18)
-  text('You left the prison and quit your job!', (width -400)/ 2, height / 1.6)
-  text('Press "S" to restart', width / 2.8, height - height/20)
+  text('You left the prison and quit your job!', width/ 2, height / 1.6)
+  text('Press "S" to restart', width/ 2, height - height/20)
   YN = false
 
 
