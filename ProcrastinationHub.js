@@ -2,8 +2,8 @@ let buttons;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
-  let texts = ['1', '2', '3',' 4', '5', '6'];
-  let urls = ['1', '2', '3', '4', '5', '6'];
+  let texts = ['WASD Game', '2', '3',' 4', '5', '6'];
+  let urls = ['WASD-Game', '2', '3', '4', '5', '6'];
   for (let i = 0; i < 6; i++) {
     buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
@@ -43,7 +43,7 @@ class Button {
   }
   display() {
     this.button.style("background-color", 255);
-    this.button.style("font-size", height / 25 + "px");
+    this.button.style("font-size", height / 35 + "px");
     this.button.position(this.x, this.y);
     this.button.size(this.width, this.height);
   }
