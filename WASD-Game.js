@@ -19,6 +19,7 @@ function setup() {
   img3 = loadImage('download (1).jpeg')
   directions = ['right', 'left', 'up', 'down'];
   direction = random(directions);
+  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 
 }
 
@@ -44,6 +45,7 @@ function draw() {
       y1 = y1 + speed1
     }
     direction = random(directions)
+    myButton.doStuff()
 
     if (direction == 'right') {
       x2 = x2 + speed2
