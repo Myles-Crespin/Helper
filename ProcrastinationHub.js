@@ -48,6 +48,7 @@ class Button {
     this.button.size(this.width, this.height);
   }
   redirect() {
+    let lru = this.url
     this.button.mousePressed(function buttonpress() {
       window.location.replace(lru);
     });
