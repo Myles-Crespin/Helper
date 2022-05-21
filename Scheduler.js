@@ -8,11 +8,11 @@ let mA, m2, m3, m4;
 let lS1, lS2, lS3, lF1, lF2, lM1, lA1;
 let e1, e2, e3, e4;
 function preload() {
-  section = getItem("section");
+  //section = getItem("section");
 }
 function setup() {
+  createCanvas(innerWidth, innerHeight);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
-  createCanvas(400, 400);
   buttonText = "Next";
   number = 0;
   variable = 0;
@@ -37,13 +37,14 @@ function setup() {
   }
 }
 
-function draw() {myButton.doStuff()}
+function draw() {
+myButton.doStuff()}
 
 function go() {
   textSize(15);
-  text(words[number], 100, 160);
+  text(words[number], 110, 152);
   if (number < 4 || number == 7) {
-    text("8-", 197, 187);
+    text("8-", 162, 152);
   }
   input1 = createInput();
   input1.size(100, 20);
@@ -303,7 +304,7 @@ function lunch() {
   }
 }
 function submit() {
-  createCanvas(900, 400);
+  createCanvas(innerWidth, innerHeight);
   background(255);
   science();
   math();
