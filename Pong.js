@@ -39,6 +39,7 @@ function setup() {
 
 function draw() {
   background(220);
+  myButton.doStuff()
   fill(300, 240, 0);
   noStroke();
   frameRate(400);
