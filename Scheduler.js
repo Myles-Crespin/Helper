@@ -8,7 +8,7 @@ let mA, m2, m3, m4;
 let lS1, lS2, lS3, lF1, lF2, lM1, lA1;
 let e1, e2, e3, e4;
 function preload() {
-  //section = getItem("section");
+  section = getItem("section");
 }
 function setup() {
   createCanvas(innerWidth, innerHeight);
@@ -42,7 +42,7 @@ myButton.doStuff()}
 
 function go() {
   textSize(15);
-  text(words[number], 110, 152);
+  text(words[number], 90, 152);
   if (number < 4 || number == 7) {
     text("8-", 162, 152);
   }
