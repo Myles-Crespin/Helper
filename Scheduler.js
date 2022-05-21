@@ -42,9 +42,9 @@ myButton.doStuff()}
 
 function go() {
   textSize(15);
-  text(words[number], 100, 175);
+  text(words[number], 110, 150);
   if (number < 4 || number == 7) {
-    text("8-", 170, 175);
+    text("8-", 190, 180);
   }
   input1 = createInput();
   input1.size(100, 20);
