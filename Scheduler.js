@@ -42,7 +42,7 @@ myButton.doStuff()}
 
 function go() {
   textSize(15);
-  text(words[number], 110, 150);
+  text(words[number], 110, 145);
   if (number < 4 || number == 7) {
     text("8-", 190, 180);
   }
@@ -304,7 +304,6 @@ function lunch() {
   }
 }
 function submit() {
-  createCanvas(innerWidth, innerHeight);
   background(255);
   science();
   math();
