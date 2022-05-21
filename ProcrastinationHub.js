@@ -2,8 +2,8 @@ let buttons;
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
-  let texts = ['WASD Game', '2', '3',' 4', '5', '6'];
-  let urls = ['WASD-Game', '2', '3', '4', '5', '6'];
+  let texts = ['WASD Game', 'Pong', 'Brick Breaker',' Rain Catcher', 'Mad Libs', '6'];
+  let urls = ['WASD-Game', 'Pong', 'Brick-Breaker', 'Rain-Catcher', 'Mad-Libs', '6'];
   for (let i = 0; i < 6; i++) {
     buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
