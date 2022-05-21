@@ -1,4 +1,3 @@
-
 let RectY,
   RectX,
   RectHeight,
@@ -36,13 +35,13 @@ let RectY,
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   init();
+  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {
   background(220);
-   myButton.doStuff()
+  myButton.doStuff()
   //move paddle
   //use if/else if to check  for the right or left arrow key and update the
   //x position of the paddle using the speed variable
@@ -87,8 +86,8 @@ function PowerUp2() {
     PU2X > RectX - RectWidth / 2 &&
     PU2X + PU2WH < RectX + RectWidth / 2
   ) {
-    CircleXVelocity = 1.5;
-    CircleYVelocity = 2.5;
+    CircleXVelocity = width/300;
+    CircleYVelocity = height/200;
     PU2WH = 0;
   }
 }
@@ -141,10 +140,10 @@ function displayPaddle() {
 
 function movePaddle() {
   if (keyIsDown(39)) {
-    RectX = RectX + 3;
+    RectX = RectX + width/150;
   }
   if (keyIsDown(37)) {
-    RectX = RectX - 3;
+    RectX = RectX - width/150;
   }
 }
 
@@ -308,7 +307,7 @@ function displayBricks() {
 }
 
 function init() {
-  RectY = 360;
+  RectY = height-height/10;
   RectX = 200;
   RectHeight = 20;
   RectWidth = 100;
