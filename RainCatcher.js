@@ -26,7 +26,7 @@ function setup() {
 
 function draw() {
   background(bground);
-  buttons[i].redirect();
+  myButton.doStuff();
   textSize(20); //makes text bigger
   textAlign(LEFT); //aligns text
   text("Score " + score, 20, 20); //shows score
