@@ -44,7 +44,7 @@ function draw() {
   noStroke();
   frameRate(400);
   rect(LeftRectX, LeftRectY, LeftRectWidth, LeftRectHeight);
-  if (RandValue == 2) {
+  if (int(RandValue) == 2) {
     RightRectY += YVelocity;
   } else {
     RightRectY = CircleY - RightRectHeight / 2;
