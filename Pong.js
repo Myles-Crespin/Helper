@@ -26,14 +26,14 @@ function setup() {
   LeftRectHeight = 80;
   LeftRectWidth = 20;
   // (Use the YVelocity to control how hard of a setting the game is higher# = harder lower# = easier)
-  YVelocity = height / 90;
+  YVelocity = height / 50;
   CircleX = 180;
   CircleY = 150;
   CircleD = 40;
   Chance = 10;
   RandValue = 1;
-  CircleXVelocity = random(width / 100);
-  CircleYVelocity = random(height / 200);
+  CircleXVelocity = random(width/200,width / 100);
+  CircleYVelocity = random(height/400, height / 200);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
