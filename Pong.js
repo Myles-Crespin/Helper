@@ -69,7 +69,6 @@ function draw() {
     CircleY <= LeftRectY + LeftRectHeight
   ) {
     CircleXVelocity *= -1;
-    CircleYVelocity *= -1;
   }
   if (
     CircleX + CircleD / 2 > RightRectX &&
@@ -77,7 +76,6 @@ function draw() {
     CircleY <= RightRectY + RightRectHeight
   ) {
     RandValue = random(Chance);
-    CircleYVelocity *= -1;
     CircleXVelocity *= -1;
   }
 
