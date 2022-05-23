@@ -30,10 +30,10 @@ function setup() {
   CircleX = 180;
   CircleY = 150;
   CircleD = 40;
-  Chance = 2;
-  RandValue = random(Chance);
-  CircleXVelocity = random(width / 150);
-  CircleYVelocity = random(height / 300);
+  Chance = 10;
+  RandValue = 1;
+  CircleXVelocity = random(width / 100);
+  CircleYVelocity = random(height / 200);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
