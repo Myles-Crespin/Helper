@@ -26,7 +26,7 @@ function setup() {
   LeftRectHeight = 80;
   LeftRectWidth = 20;
   // (Use the YVelocity to control how hard of a setting the game is higher# = harder lower# = easier)
-  YVelocity = height / 100;
+  YVelocity = height / 50;
   CircleX = 180;
   CircleY = 150;
   CircleD = 40;
