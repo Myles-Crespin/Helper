@@ -1,5 +1,6 @@
+//this program makes all the buttons for getting to the other programs
 let buttons;
-function setup() {
+function setup() {//mostly defining variables, also runs some functions.
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
   let texts = ['Scheduler', 'Time Manager', 'Therapist Friend',' Procrastination Center', '5', '6'];
@@ -10,7 +11,7 @@ function setup() {
   }
 }
 
-function draw() {
+function draw() {//shows text and detects when mouse is over
   background(0);
   fill(0, 255, 0);
   textSize(50);
@@ -29,8 +30,8 @@ function draw() {
   }
 }
 
-class Button {
-  constructor(word, url, number) {
+class Button {//button class
+  constructor(word, url, number) {//defining variables
     this.word = word;
     this.url = url;
     this.width = width / 4 - width / 12;
@@ -39,19 +40,19 @@ class Button {
     this.y = height / 2 + int(number / 2) * (this.height + this.height / 2);
     this.button = createButton(this.word);
   }
-  display() {
+  display() {//display settings for button
     this.button.style("background-color", 255);
     this.button.style("font-size", height / 35 + "px");
     this.button.position(this.x, this.y);
     this.button.size(this.width, this.height);
   }
-  redirect() {
+  redirect() {//this is what happens when the button is pressed
     let lru = this.url
     this.button.mousePressed(function buttonpress() {
       window.location.replace(lru);
     });
   }
-  mouseIsOver() {
+  mouseIsOver() {//this is what happens when the mouse is over the button
     this.button.style("background-color", 200);
   }
 }
