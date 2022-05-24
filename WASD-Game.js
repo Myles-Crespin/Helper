@@ -1,6 +1,7 @@
+//this program is a game that is played with the arrow keys; if you touch the walls, you lose; if the enemy touches the walls, you lose; if you touch the enemy, you win
 let x1, y1, w1, l1, x2, y2, w2, l2, direction, directions, right1, right2, speed1, speed2, img, img2, img3, YN
 
-function setup() {
+function setup() {//mostly defines variables and it also creates the canvas.
   createCanvas(window.innerWidth, window.innerHeight);
   
   x1 = 10
@@ -23,7 +24,7 @@ function setup() {
 
 }
 
-function draw() {
+function draw() {//does all the movement and the drawing of the shapes. It also detects when you win or lose.
   if (keyIsDown(83) && YN == false) {
     setup()
     YN = true
@@ -76,7 +77,7 @@ function draw() {
   }
 }
 
-function win() {
+function win() {// what happens when you win
   textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
@@ -88,7 +89,7 @@ function win() {
   YN = false
 }
 
-function lose1() {
+function lose1() {// what happens when you lose in this way
     textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
@@ -101,7 +102,7 @@ function lose1() {
 
 }
 
-function lose2() {
+function lose2() {// what happens when you lose in this way
     textAlign(CENTER)
   textSize(50)
   fill(70, 250, 0)
