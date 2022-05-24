@@ -174,7 +174,7 @@ function ballHitBrick() {
   }
 
   if (
-    brick5 && CircleYVelocity > 0 &&
+    brick5 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < 2 * brickHeight &&
     CircleX + CircleD / 2 > width / 2 - brickWidth * 2 &&
     CircleX - CircleD / 2 < width / 2 - brickWidth
@@ -184,7 +184,7 @@ function ballHitBrick() {
   }
 
   if (
-    brick6 && CircleYVelocity > 0 &&
+    brick6 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < 2 * brickHeight &&
     CircleX + CircleD / 2 > width / 2 - brickWidth &&
     CircleX - CircleD / 2 < width / 2
@@ -193,7 +193,7 @@ function ballHitBrick() {
     CircleYVelocity *= -1;
   }
   if (
-    brick7 && CircleYVelocity > 0 &&
+    brick7 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < 2 * brickHeight &&
     CircleX + CircleD / 2 > width / 2 &&
     CircleX - CircleD / 2 < width / 2 + brickWidth
@@ -202,7 +202,7 @@ function ballHitBrick() {
     CircleYVelocity *= -1;
   }
   if (
-    brick8 && CircleYVelocity > 0 &&
+    brick8 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < 2 * brickHeight &&
     CircleX + CircleD / 2 > width / 2 + brickWidth &&
     CircleX - CircleD / 2 < width / 2 + brickWidth * 2
@@ -212,7 +212,7 @@ function ballHitBrick() {
   }
 
   if (
-    brick1 && CircleYVelocity > 0 &&
+    brick1 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < brickHeight &&
     CircleX + CircleD / 2 > width / 2 - brickWidth * 2 &&
     CircleX - CircleD / 2 < width / 2 - brickWidth
@@ -221,7 +221,7 @@ function ballHitBrick() {
     CircleYVelocity *= -1;
   }
   if (
-    brick2 &&
+    brick2 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < brickHeight &&
     CircleX + CircleD / 2 > width / 2 - brickWidth &&
     CircleX - CircleD / 2 < width / 2
@@ -231,7 +231,7 @@ function ballHitBrick() {
   }
 
   if (
-    brick3 && CircleYVelocity > 0 &&
+    brick3 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < brickHeight &&
     CircleX + CircleD / 2 > width / 2 &&
     CircleX - CircleD / 2 < width / 2 + brickWidth
@@ -241,7 +241,7 @@ function ballHitBrick() {
   }
 
   if (
-    brick4 && CircleYVelocity > 0 &&
+    brick4 && CircleYVelocity < 0 &&
     CircleY - CircleD / 2 < brickHeight &&
     CircleX + CircleD / 2 > width / 2 + brickWidth &&
     CircleX - CircleD / 2 < width / 2 + brickWidth * 2
