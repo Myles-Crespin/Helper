@@ -1,4 +1,3 @@
-//todo:  clear schedule cookie button, options for no language and other grade language
 // blue = math, green = science, purple = english, yellow = language, red = history, pink = art1, orange = art2
 let buttonText, section, number, words, input1, button, language, acc, variable;
 let s, m, e, l, h, pe;
