@@ -1,4 +1,5 @@
 let buttons;
+//This program makes all he buttons that lead you to different games
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
