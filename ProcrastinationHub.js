@@ -1,6 +1,6 @@
-let buttons;
 //This program makes all he buttons that lead you to different games
-function setup() {
+let buttons;
+function setup() {//mostly defining variables and also calling some functions.
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
   let texts = ['WASD Game', 'Pong', 'Brick Breaker',' Rain Catcher', 'Mad Libs', '6'];
@@ -12,7 +12,7 @@ function setup() {
   }
 }
 
-function draw() {
+function draw() {//does the text and does stuff when mouse is over button and calls the function that makes the button redirect and calls a function for the back button.
   background(0,0,255);
   fill(255, 0, 0);
   textSize(50);
@@ -32,8 +32,8 @@ function draw() {
   }
 }
 
-class Button {
-  constructor(word, url, number) {
+class Button {//button class
+  constructor(word, url, number) {//defining variables
     this.word = word;
     this.url = url;
     this.width = width / 4 - width / 12;
@@ -42,19 +42,19 @@ class Button {
     this.y = height / 2 + int(number / 2) * (this.height + this.height / 2);
     this.button = createButton(this.word);
   }
-  display() {
+  display() {//changes some button settings
     this.button.style("background-color", 255);
     this.button.style("font-size", height / 35 + "px");
     this.button.position(this.x, this.y);
     this.button.size(this.width, this.height);
   }
-  redirect() {
+  redirect() {//this is what happens when the button is pushed
     let lru = this.url
     this.button.mousePressed(function buttonpress() {
       window.location.replace(lru);
     });
   }
-  mouseIsOver() {
+  mouseIsOver() {//this is what happens when the mouse is over the button
     this.button.style("background-color", 200);
   }
 }
