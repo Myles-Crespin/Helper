@@ -252,7 +252,7 @@ function art1() {//show art 1 periods
       rect(90 * whileVariable, art11[whileVariable] * 40 - 40, 90, 40);
       fill(0, 0, 0);
       text(
-        "art1",
+        section[4],
         90 * whileVariable + 25,
         art11[whileVariable] * 40 - 40 + 10
       );
@@ -270,7 +270,7 @@ function art2() {//show art 2 periods
       rect(90 * whileVariable, art22[whileVariable] * 40 - 40, 90, 40);
       fill(0, 0, 0);
       text(
-        "art2",
+        section[5],
         90 * whileVariable + 25,
         art22[whileVariable] * 40 - 40 + 10
       );
