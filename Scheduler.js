@@ -1,4 +1,5 @@
 // blue = math, green = science, purple = english, yellow = language, red = history, pink = art1, orange = art2
+// In this program, you input your sections for classes and it outputs your schedule. It also saves your schedule in cookies.
 let buttonText, section, number, words, input1, button, language, acc, variable;
 let s, m, e, l, h, pe;
 let s1, s2, s3, s4;
@@ -6,10 +7,10 @@ let h1, h2, h3, h4;
 let mA, m2, m3, m4;
 let lS1, lS2, lS3, lF1, lF2, lM1, lA1;
 let e1, e2, e3, e4;
-function preload() {
+function preload() {//for cookies
   section = getItem("section");
 }
-function setup() {
+function setup() { //mostly defines variables, it also runs some functions.
   createCanvas(innerWidth, innerHeight);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   buttonText = "Next";
@@ -36,10 +37,10 @@ function setup() {
   }
 }
 
-function draw() {
-myButton.doStuff()}
+function draw() { //just for the back button
+myButton.doStuff()} 
 
-function go() {
+function go() {//this function starts all the inputs
   textSize(15);
   text(words[number], 110, 145);
   if (number < 4 || number == 7) {
@@ -53,7 +54,7 @@ function go() {
   button.size(50, 26);
   button.mousePressed(pressed);
 }
-function pressed() {
+function pressed() { //this is what happens when the button is pressed, all the if statements are doing different things depending on which question you are on
   if (number != 6) {
     section[number] = input1.value();
   }
@@ -134,7 +135,7 @@ function pressed() {
     }
   }
 }
-function math() {
+function math() {//show math periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -148,7 +149,7 @@ function math() {
     whileVariable++;
   }
 }
-function science() {
+function science() {//show science periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -172,7 +173,7 @@ function science() {
     whileVariable++;
   }
 }
-function history() {
+function history() {//show history periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -195,7 +196,7 @@ function history() {
     whileVariable++;
   }
 }
-function english() {
+function english() {//show english periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -218,7 +219,7 @@ function english() {
     whileVariable++;
   }
 }
-function language1() {
+function language1() {//show language periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -241,7 +242,7 @@ function language1() {
     whileVariable++;
   }
 }
-function art1() {
+function art1() {//show art 1 periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -259,7 +260,7 @@ function art1() {
     whileVariable++;
   }
 }
-function art2() {
+function art2() {//show art 2 periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -277,7 +278,7 @@ function art2() {
     whileVariable++;
   }
 }
-function PE() {
+function PE() {//show PE periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -292,7 +293,7 @@ function PE() {
     whileVariable++;
   }
 }
-function lunch() {
+function lunch() {//show lunch periods
   let whileVariable;
   whileVariable = 0;
   while (whileVariable <= 10) {
@@ -302,7 +303,7 @@ function lunch() {
     whileVariable++;
   }
 }
-function submit() {
+function submit() {//run all the subject functions
   background(255);
   science();
   math();
@@ -315,7 +316,7 @@ function submit() {
   language1();
   storeItem("section", section);
 }
-function classes() {
+function classes() {//data table
   s = [s1, s2, s3, s4];
   s[0] = [0, 1, 2, 1, 0, 2, 0, 2, 1, 1];
   s[1] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
