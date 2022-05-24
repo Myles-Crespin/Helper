@@ -1,5 +1,5 @@
-// blue = math, green = science, purple = english, yellow = language, red = history, pink = art1, orange = art2
 // In this program, you input your sections for classes and it outputs your schedule. It also saves your schedule in cookies.
+// blue = math, green = science, purple = english, yellow = language, red = history, pink = art1, orange = art2
 let buttonText, section, number, words, input1, button, language, acc, variable;
 let s, m, e, l, h, pe;
 let s1, s2, s3, s4;
