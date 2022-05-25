@@ -82,7 +82,7 @@ function PowerUp2() {
     PU2Y += 1;
   }
   if (
-    PU2Y + PU2WH == RectY - RectHeight / 2 &&
+    PU2Y + PU2WH >= RectY - RectHeight / 2 &&
     PU2X > RectX - RectWidth / 2 &&
     PU2X + PU2WH < RectX + RectWidth / 2
   ) {
@@ -100,7 +100,7 @@ function PowerUp() {
     PUY += 1;
   }
   if (
-    PUY + PUWH == RectY - RectHeight / 2 &&
+    PUY + PUWH >= RectY - RectHeight / 2 &&
     PUX > RectX - RectWidth / 2 &&
     PUX + PUWH < RectX + RectWidth / 2
   ) {
