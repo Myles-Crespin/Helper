@@ -1,4 +1,4 @@
-//this program is a game that is played with the arrow keys; if you touch the walls, you lose; if the enemy touches the walls, you lose; if you touch the enemy, you win
+//this program is a game that is played with the WASD keys; if you touch the walls, you lose; if the enemy touches the walls, you lose; if you touch the enemy, you win
 let x1, y1, w1, l1, x2, y2, w2, l2, direction, directions, right1, right2, speed1, speed2, img, img2, img3, YN
 
 function setup() {//mostly defines variables and it also creates the canvas.
@@ -12,7 +12,7 @@ function setup() {//mostly defines variables and it also creates the canvas.
   y2 = height/2
   w2 = 50
   l2 = 50
-  speed1 = 1
+  speed1 = 3
   speed2 = 10
   YN = true
   img = loadImage('Explosion.jpg')
@@ -36,13 +36,13 @@ function draw() {//does all the movement and the drawing of the shapes. It also 
     rect(x1, y1, w1, l1)
     fill(200, 255, 107)
     rect(x2, y2, w2, l2)
-    if (keyIsDown(39)) {
+    if (keyIsDown(68)) {
       x1 = x1 + speed1
-    } else if (keyIsDown(37)) {
+    } else if (keyIsDown(65)) {
       x1 = x1 - speed1
-    } else if (keyIsDown(38)) {
+    } else if (keyIsDown(87)) {
       y1 = y1 - speed1
-    } else if (keyIsDown(40)) {
+    } else if (keyIsDown(83)) {
       y1 = y1 + speed1
     }
     direction = random(directions)
