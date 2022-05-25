@@ -5,7 +5,7 @@ function setup() {//mostly defining variables, also runs some functions.
   buttons = [];
   let texts = ['Scheduler', 'Time Manager', 'Therapist Friend',' Procrastination Center', '5', '6'];
   let urls = ['Scheduler', 'Time-Manager', 'Therapist', 'Procrastination-Center', '5', '6'];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 4; i++) {
     buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
   }
