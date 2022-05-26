@@ -1,3 +1,5 @@
+//this game controls a paddle with the arrow keys and is a pong game
+
 let RightRectY,
   RightRectX,
   RightRectHeight,
