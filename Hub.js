@@ -37,7 +37,7 @@ class Button {//button class
     this.width = width / 4 - width / 12;
     this.height = height / 12;
     this.x = width / 4 + (number % 2) * (this.width + width / 6);
-    this.y = height / 2 + int(number / 2) * (this.height + this.height / 2);
+    this.y = height / 2 + int(number / 2) * (2 * this.height);
     this.button = createButton(this.word);
   }
   display() {//display settings for button
