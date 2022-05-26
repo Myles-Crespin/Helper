@@ -33,13 +33,14 @@ let RectY,
   PU2WH;
 // declare variables for paddle - x, y, width, height, speed, color
 
-function setup() {
+function setup() {//create canvas and call some things
   createCanvas(window.innerWidth, window.innerHeight);
   init();
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {
+  //background and call a lot of things
   background(220);
   myButton.doStuff()
   //move paddle
@@ -63,6 +64,7 @@ function draw() {
   PowerUp2();
 }
 function MousePress() {
+  //if mouse is pressed in this are then restart program
   if (
     mouseIsPressed &&
     mouseX > 175 &&
@@ -75,6 +77,7 @@ function MousePress() {
 }
 
 function PowerUp2() {
+  //make a powerup
   rectMode(CORNER);
   if (!brick5) {
     fill(200, 0, 0);
@@ -93,6 +96,7 @@ function PowerUp2() {
 }
 
 function PowerUp() {
+  //make a power up
   rectMode(CORNER);
   if (!brick6) {
     fill(200, 200, 0);
@@ -110,6 +114,7 @@ function PowerUp() {
 }
 
 function Restart() {
+  //function for creating restart button
   if (
     !(
       brick1 ||
@@ -132,6 +137,7 @@ function Restart() {
   }
 }
 function displayPaddle() {
+  //displaying paddle
   rectMode(CENTER);
   //display paddle - use fill() then rect()
   fill(r, g, b);
@@ -139,6 +145,7 @@ function displayPaddle() {
 }
 
 function movePaddle() {
+  //moving paddle
   if (keyIsDown(39)) {
     RectX = RectX + width/150;
   }
@@ -148,16 +155,19 @@ function movePaddle() {
 }
 
 function displayBall() {
+  //displaying ball
   fill(r2, g2, b2);
   ellipse(CircleX, CircleY, CircleD, CircleD);
 }
 
 function moveBall() {
+  //moving ball
   CircleX += CircleXVelocity;
   CircleY += CircleYVelocity;
 }
 
 function ballHitPaddle() {
+  //detecting when ball hits paddle
   if (
     CircleYVelocity > 1 &&
     CircleY + CircleD / 2 > RectY - RectHeight / 2 &&
@@ -169,6 +179,7 @@ function ballHitPaddle() {
 }
 
 function ballHitBrick() {
+  //detecting when ball hits brick
   if (CircleY - CircleD / 2 < 0) {
     CircleYVelocity *= -1;
   }
@@ -252,12 +263,14 @@ function ballHitBrick() {
 }
 
 function ballHitSide() {
+  //detecting when the ball hits the side
   if (CircleX - CircleD / 2 <= 0 || CircleX + CircleD / 2 >= width) {
     CircleXVelocity *= -1;
   }
 }
 
 function missBall() {
+  //detcting when the paddle misses the ball
   if (CircleY + CircleD / 2 > height) {
     CircleYVelocity *= 0;
     CircleXVelocity *= 0;
@@ -270,6 +283,7 @@ function missBall() {
 }
 
 function displayBricks() {
+  //displaying the bricks
   rectMode(CORNER);
   noStroke();
   if (brick1) {
@@ -307,6 +321,7 @@ function displayBricks() {
 }
 
 function init() {
+  //initialize
   RectY = height-height/10;
   RectX = 200;
   RectHeight = 20;
