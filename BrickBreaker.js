@@ -1,3 +1,4 @@
+//this program is controlled with the arrow keys and you move the paddle to make the ball bounce off of it and then break the bricks
 let RectY,
   RectX,
   RectHeight,
