@@ -16,8 +16,9 @@ let RightRectY,
   CircleYVelocity,
   RandValue,
   Chance;
-
+//deaclares variables for the two paddles dimensions and position, the circles dimensions and position, aswell as velocity for each of them
 function setup() {
+  //creates the wdith, height, and postion of each shape 
   createCanvas(window.innerWidth, window.innerHeight);
   RightRectX = width - 50;
   RightRectY = 10;
@@ -40,6 +41,7 @@ function setup() {
 }
 
 function draw() {
+  //displays the left rect, fill, and no stroke
   background(220);
   myButton.doStuff()
   fill(300, 240, 0);
@@ -47,29 +49,34 @@ function draw() {
   frameRate(400);
   rect(LeftRectX, LeftRectY, LeftRectWidth, LeftRectHeight);
   if (int(RandValue) == 2) {
+    //randomly moves the right rect up and down
     RightRectY += YVelocity;
   } else {
+    //otherwise it should hit the ball
     RightRectY = CircleY - RightRectHeight / 2;
   }
   if (keyIsDown(40)) {
+    //if bottom arrow is down move the left rect down
     LeftRectY += height / 200;
   }
   if (keyIsDown(38)) {
+    //if the top arrow is down move it up
     LeftRectY -= height / 200;
   }
-  rect(RightRectX, RightRectY, RightRectWidth, RightRectHeight);
+  rect(RightRectX, RightRectY, RightRectWidth, RightRectHeight); //right rect
   if (RightRectY + RightRectHeight > height || RightRectY < 0) {
+    //keeps the right rect within the screen
     YVelocity *= -1;
   }
   frameRate(70);
   fill(100, 100, 100);
-  ellipse(CircleX, CircleY, CircleD, CircleD);
+  ellipse(CircleX, CircleY, CircleD, CircleD); //ball
 
   if (
     CircleX - CircleD / 2 <= LeftRectX + LeftRectWidth &&
     CircleY >= LeftRectY &&
     CircleY <= LeftRectY + LeftRectHeight
-  ) {
+  ) { //if the ball hits the left paddle move it the other way
     CircleXVelocity *= -1;
   }
   if (
@@ -77,26 +84,31 @@ function draw() {
     CircleY >= RightRectY &&
     CircleY <= RightRectY + RightRectHeight
   ) {
+    //if the ball hits the right paddle move it the other way and make RandValue equal to random number
     RandValue = random(Chance);
     CircleXVelocity *= -1;
   }
-
+//the balls psotion is added to whatever the velocitys are
   CircleX += CircleXVelocity;
   CircleY += CircleYVelocity;
   if (CircleY + CircleD / 2 > height || CircleY - CircleD / 2 < 0) {
+    //if the ball touches the bottom or top it will bounce off
     CircleYVelocity *= -1;
   }
 
   if (CircleX - CircleD / 2 < 0 || CircleX + CircleD / 2 > width) {
+    //if the ball hits either side it stops
     CircleXVelocity = 0;
     CircleYVelocity = 0;
     RightRectY = 0;
   }
   if (CircleX - CircleD / 2 < 0) {
+    //if the ball hits the left side you have lost
     textSize(50);
     text("You Lost", 200, 50);
   }
   if (CircleX + CircleD / 2 > width) {
+    //if the ball hits the right side you have won
     textSize(50);
     text("K.O", 250, 50);
   }
