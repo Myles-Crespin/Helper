@@ -1,6 +1,4 @@
-
 //this program makes you input how many projects you have, how much time you have, and how many breaks you want. It then calculates the most efficient way to get your work done
-
 let box;
 let myProjectC;
 let button;
@@ -12,10 +10,12 @@ function setup() {
   button = createButton("Submit"); //creates a submit button
   button.position(box.x + box.width, box.y); //creates the buttons
   myProjectC = new projectC();
+  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
 }
 
 function draw() {//for text and background mostly an detects if button is pressed
   background(220);
+  myButton.doStuff()
    if(myProjectC.tgo){
     myProjectC.question();
   }
