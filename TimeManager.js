@@ -51,7 +51,7 @@ function draw() {
     myProjectC.question(); //displays the next question for how much time each project will take
   }
   textAlign(CENTER); //moves text to center
-  text(q, width / 2, 70); //displays the questions above the box
+  text(q, 200, 70); //displays the questions above the box
   button.mousePressed(buttons); //when the the first button is pressed 6 more buttons will be called
 
   if (myProjectC.x > int(box.value())) {
@@ -85,7 +85,7 @@ function draw() {
     textSize(15);
     text(
       "It appears you require more time for your \n projects than what you have, some suggestions would be: \n A. Email your teacher for an extention \n B. Cut something from your schedule to make more time \n C. Drop out of school ",
-      width / 2,
+      200,
       200
     );
   } else if ((timeWorked - freeTime < 0 && breaks >= 0) || breaks <= 0) {
@@ -105,7 +105,7 @@ function draw() {
         "1/" +
         extraB +
         " of the workload done.",
-      width / 2,
+      200,
       200
     );
   }
