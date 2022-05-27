@@ -144,7 +144,11 @@ function math() {//show math periods
       textAlign(CENTER);
       rect(90 * whileVariable, m[section[2]][whileVariable] * 40 - 40, 90, 40);
       fill(0, 0, 0);
-      text("math", 90 * whileVariable, m[section[2]][whileVariable] * 40 - 40);
+     text(
+        "math",
+        90 * whileVariable + 25,
+        m[section[2]][whileVariable] * 40 - 40 + 10
+      );
     }
     whileVariable++;
   }
