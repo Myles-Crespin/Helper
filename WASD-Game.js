@@ -15,6 +15,7 @@ function setup() {//mostly defines variables and it also creates the canvas.
   speed1 = 3
   speed2 = 10
   YN = true
+  YN2= false
   img = loadImage('Explosion.jpg')
   img2 = loadImage('download.jpeg')
   img3 = loadImage('download (1).jpeg')
