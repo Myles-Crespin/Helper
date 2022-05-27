@@ -1,5 +1,5 @@
 //this program is a game that is played with the WASD keys; if you touch the walls, you lose; if the enemy touches the walls, you lose; if you touch the enemy, you win
-let x1, y1, w1, l1, x2, y2, w2, l2, direction, directions, right1, right2, speed1, speed2, img, img2, img3, YN
+let x1, y1, w1, l1, x2, y2, w2, l2, direction, directions, right1, right2, speed1, speed2, img, img2, img3, YN, YN2
 
 function setup() {//mostly defines variables and it also creates the canvas.
   createCanvas(window.innerWidth, window.innerHeight);
