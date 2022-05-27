@@ -1,4 +1,4 @@
-//this program makes you input how many projects you have, how much time you have, and how many breaks you want. It then calculates the most efficient way to get your work done
+//you input your name and a question and it oupute "advice"
 let myAnswerClass;
 let box; //creating a submission box
 let button2; //creating a second button
