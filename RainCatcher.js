@@ -1,4 +1,4 @@
-
+//in this game you control a catcher with your mouse and try to catch all the rain drops
 let myCatcher; //declaring object
 let myTimer; // declaring object
 let drops = []; //declaring array
