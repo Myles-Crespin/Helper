@@ -25,11 +25,16 @@ function setup() {//mostly defines variables and it also creates the canvas.
 }
 
 function draw() {//does all the movement and the drawing of the shapes. It also detects when you win or lose.
-  if (keyIsDown(83) && YN == false) {
+  if(YN==false&&YN2==false){//makes it so if you are hitting "s" to move while you lose/win, it dosent instantly restart you
+    setTimeout(function timerOver(){
+      YN2=true
+    },5000)}
+
+  if (keyIsDown(83) && YN == false && YN2) {
     setup()
     YN = true
   }
-  if (YN == true) {
+  if (YN) {
     background(220);
 
     fill(23, 65, 30)
