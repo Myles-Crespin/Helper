@@ -3,9 +3,9 @@ let cars = []; //declares array
 let MyPlayer; //declares class
 let lose; //lose variable
 function setup() {
-  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   lose = false;
   createCanvas(window.innerWidth, window.innerHeight);
+  myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   myPlayer = new Player(); //creates class
   for (let i = 0; i < 15; i++) {
     cars[i] = new Car(
