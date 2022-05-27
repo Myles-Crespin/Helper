@@ -7,7 +7,7 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   myButton = new Button1((width*3)/4,0,width/4,height/10,"Back to Hub","https://ia4252.github.io/Helper/")
   myPlayer = new Player(); //creates class
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 100; i++) {
     cars[i] = new Car(
       i * 20,
       random(30, window.innerHeight - 10),
