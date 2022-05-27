@@ -11,7 +11,7 @@ function setup() {
     cars[i] = new Car(
       i * 20,
       random(30, window.innerHeight - 10),
-      random(4, 15)
+      random(8, 20)
     );
     //cars array equals class
   }
