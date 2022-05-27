@@ -4,7 +4,7 @@ let myProjectC;
 let button;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(window.innerWidth, window.innerHeight);
   box = createInput(); //creating a submission box
   box.position(75, 100); //defines the box position
   button = createButton("Submit"); //creates a submit button
