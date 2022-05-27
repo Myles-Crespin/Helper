@@ -3,8 +3,8 @@ let buttons;
 function setup() {//mostly defining variables and also calling some functions.
   createCanvas(window.innerWidth, window.innerHeight);
   buttons = [];
-  let texts = ['WASD Game', 'Pong', 'Brick Breaker',' Rain Catcher', 'Mad Libs', '6'];
-  let urls = ['WASD-Game', 'Pong', 'Brick-Breaker', 'Rain-Catcher', 'Mad-Libs', '6'];
+  let texts = ['WASD Game', 'Pong', 'Brick Breaker',' Rain Catcher', 'Mad Libs', 'Crossy Road'];
+  let urls = ['WASD-Game', 'Pong', 'Brick-Breaker', 'Rain-Catcher', 'Mad-Libs', 'Crossy-Road'];
   for (let i = 0; i < 6; i++) {
     buttons[i] = new Button(texts[i], urls[i], i);
     buttons[i].display();
