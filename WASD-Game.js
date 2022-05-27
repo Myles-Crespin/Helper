@@ -29,7 +29,7 @@ function draw() {//does all the movement and the drawing of the shapes. It also 
   if(YN==false&&YN2==false){//makes it so if you are hitting "s" to move while you lose/win, it dosent instantly restart you
     setTimeout(function timerOver(){
       YN2=true
-    },5000)}
+    },1000)}
 
   if (keyIsDown(83) && YN == false && YN2) {
     setup()
